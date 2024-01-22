@@ -1,5 +1,5 @@
 variable "CustomImageFamilyName" {
-	default = "ixia-breakingpoint-virtual-controller-9-10-110-update1"
+	default = "ixia-breakingpoint-virtual-controller-9-30-121-update2"
 	description = "Group of images to which image belongs"
 	type = string
 }
@@ -50,6 +50,12 @@ variable "RegionName" {
 	type = string
 }
 
+variable "SleepDelay" {
+	default = "7m"
+	description = "Time duration to delay to allow application to perform internal initialization required before use"
+	type = string
+}
+
 variable "Tag" {
 	default = "bps"
 	description = "App ID tag of application using the deployment"
@@ -83,7 +89,7 @@ variable "UserProjectTag" {
 }
 
 variable "Version" {
-	default = "9-10-u1"
+	default = "9-30-u2"
 	description = "Versioning of the application using the deployment"
 	type = string
 }
