@@ -24,9 +24,9 @@ variable "MachineType" {
 	}
 }
 
-variable "MarketplaceImageFamilyName" {
+variable "MarketplaceImageName" {
 	default = "ixia-breakingpoint-virtual-controller-11-0-124"
-	description = "Group of images to which image belongs"
+	description = "Identifier for image"
 	type = string
 }
 
