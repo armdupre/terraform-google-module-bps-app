@@ -1,13 +1,12 @@
 locals {
 	CanIpForward = false
-	CustomImageProjectId = var.CustomImageProjectId
-	CustomImageFamilyName = var.CustomImageFamilyName
 	Eth0PublicIpAddressName = "${local.Preamble}-eth0-ip-addr"
 	Eth0SubnetName = var.Eth0SubnetName
 	Eth0VpcNetworkName = var.Eth0VpcNetworkName
 	InstanceId = var.InstanceId
 	InstanceName = "${local.Preamble}-instance"
 	MachineType = var.MachineType
+	MarketplaceImageUrl = "projects/mpi-keysight-public/global/images/ixia-breakingpoint-virtual-controller-11-0-124"
 	NetworkTargetTags = var.NetworkTargetTags
 	Preamble = "${local.UserLoginTag}-${local.UserProjectTag}-${local.Tag}-${local.Version}-${local.InstanceId}"
 	RegionName = var.RegionName

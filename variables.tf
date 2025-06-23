@@ -1,15 +1,3 @@
-variable "CustomImageFamilyName" {
-	default = "ixia-breakingpoint-virtual-controller-10-00-patch1"
-	description = "Group of images to which image belongs"
-	type = string
-}
-
-variable "CustomImageProjectId" {
-	default = "ixvm-261016"
-	description = "Globally unique identifier for image source project"
-	type = string
-}
-
 variable "Eth0SubnetName" {
 	description = "Name of the subnet associated with the first network interface"
 	type = string
