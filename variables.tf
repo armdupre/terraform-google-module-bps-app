@@ -24,6 +24,18 @@ variable "MachineType" {
 	}
 }
 
+variable "MarketplaceImageFamilyName" {
+	default = "ixia-breakingpoint-virtual-controller-11-0-124"
+	description = "Group of images to which image belongs"
+	type = string
+}
+
+variable "MarketplaceImageProjectId" {
+	default = "mpi-keysight-public"
+	description = "Globally unique identifier for image source project"
+	type = string
+}
+
 variable "NetworkTargetTags" {
 	default = [
 		"bps-app"
@@ -77,7 +89,7 @@ variable "UserProjectTag" {
 }
 
 variable "Version" {
-	default = "10-00-p1"
+	default = "11-00"
 	description = "Versioning of the application using the deployment"
 	type = string
 }

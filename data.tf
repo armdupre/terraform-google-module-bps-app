@@ -7,5 +7,6 @@ data "google_compute_network" "Eth0VpcNetwork" {
 }
 
 data "google_compute_image" "Image" {
-	source_image = local.MarketplaceImageUrl
+	family = local.MarketplaceImageFamilyName
+	project = local.MarketplaceImageProjectId
 }
