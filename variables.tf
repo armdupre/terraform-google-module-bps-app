@@ -99,3 +99,11 @@ variable "ZoneName" {
 	description = "Deployment area within a region"
 	type = string
 }
+
+variable "init_cli" {
+	default = <<-EOF
+#!/bin/bash -xe
+BLADE_IPS=(10.0.10.11)
+    EOF
+	type = string
+}
