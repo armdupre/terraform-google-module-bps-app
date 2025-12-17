@@ -19,8 +19,11 @@ variable "MachineType" {
 	description = "Designation for set of resources available to VM"
 	type = string
 	validation {
-		condition = can(regex("n1-standard-8", var.MachineType)) || can(regex("n1-standard-4", var.MachineType))
-		error_message = "MachineType must be one of (n1-standard-8 | n1-standard-4) types."
+		condition = contains([ "n1-standard-4", "n1-standard-8", var.MachineType)
+		error_message = <<EOF
+MachineType must be one of the following types:
+	n1-standard-4, n1-standard-8
+		EOF
 	}
 }
 
